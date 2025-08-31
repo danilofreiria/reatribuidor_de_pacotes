@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Etiqueta</title>
+  <style>
+    body {
+      font-family: monospace;
+      background: white;
+      color: black;
+      margin: 0;
+      padding: 0;
+    }
+
+    .etiqueta {
+      width: 540px; /* largura aproximada etiqueta 10x15 */
+      height: 380px; /* altura aproximada etiqueta 10x15 */
+      border: 2px solid black;
+      margin: auto;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .header {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      border-bottom: 2px dashed black;
+      padding-bottom: 8px;
+    }
+
+    .info {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .info strong {
+      display: inline-block;
+      width: 90px;
+    }
+
+    .footer {
+      margin-top: auto;
+      text-align: center;
+      font-size: 12px;
+      border-top: 2px dashed black;
+      padding-top: 5px;
+    }
+
+    .actions {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .actions button {
+      margin: 5px;
+      padding: 6px 14px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    @media print {
+      .actions { display: none; } /* não imprimir botões */
+      body { margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="etiqueta">
+    <div class="header">📦 REATRIBUIÇÃO</div>
+
+    <div class="info"><strong>ROTA:</strong> <span id="rota"></span></div>
+    <div class="info"><strong>CIDADE:</strong> <span id="cidade"></span></div>
+    <div class="info"><strong>AT:</strong> <span id="at"></span></div>
+    <div class="info"><strong>BR:</strong> <span id="br"></span></div>
+
+    <div class="footer">Gerado pelo sistema REATRIBUIDOR DE ROTAS</div>
+    <div class="actions">
+      <button id="printBtn">IMPRIMIR</button>
+      <button id="closeBtn">FECHAR</button>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("rota").innerText   = params.get("rota")   || "";
+    document.getElementById("cidade").innerText = params.get("cidade") || "";
+    document.getElementById("at").innerText     = params.get("at")     || "";
+    document.getElementById("br").innerText     = params.get("br")     || "";
+
+    document.getElementById("printBtn").addEventListener("click", () => {
+      window.print();
+    });
+    document.getElementById("closeBtn").addEventListener("click", () => {
+      window.close();
+    });
+  </script>
+</body>
+</html>

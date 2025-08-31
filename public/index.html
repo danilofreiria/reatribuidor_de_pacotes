@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>REATRIBUIDOR DE PACOTES - SPX LSP 🚚</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">REATRIBUIDOR DE PACOTES - SPX HUB_LSP-42</h1>
+
+    <div class="upload-section">
+      <div class="upload-box">
+        <button id="uploadHistorico">CARREGAR HISTÓRICO_ROMANEIO</button>
+        <span id="labelHistorico">Nenhum arquivo selecionado</span>
+      </div>
+
+      <div class="upload-box">
+        <button id="uploadDia">CARREGAR ROMANEIO_DIA</button>
+        <span id="labelDia">Nenhum arquivo selecionado</span>
+      </div>
+    </div>
+
+    <div class="field-box">
+      <div class="input-group">
+        <label for="codigoBr">BIPE O CÓDIGO BR:</label>
+        <input type="text" id="codigoBr" class="input-field" />
+      </div>
+
+      <div class="separator">=====_  OU  _=====</div>
+
+      <div class="input-group">
+        <label for="cep">INSIRA O CEP:</label>
+        <input type="text" id="cep" class="input-field" />
+      </div>
+    </div>
+
+    <div class="result-box">
+      <div class="rota">
+        <div class="label">ROTA 1:</div>
+        <div class="output-value rota-opcao" data-index="0">(RETORNO DO SISTEMA)</div>
+      </div>
+      <div class="rota">
+        <div class="label">ROTA 2:</div>
+        <div class="output-value rota-opcao" data-index="1">(RETORNO DO SISTEMA)</div>
+      </div>
+      <div class="rota">
+        <div class="label">ROTA 3:</div>
+        <div class="output-value rota-opcao" data-index="2">(RETORNO DO SISTEMA)</div>
+      </div>
+    </div>
+
+    <div class="motivo-section">
+      <label for="motivo">MOTIVO DA REATRIBUIÇÃO:</label>
+      <select id="motivo" class="input-field">
+        <option value="">Selecione</option>
+        <option>ERRO DE ETIQUETA</option>
+        <option>ERRO DE SORTING</option>
+        <option>RETIRADO (VOLUMOSO)</option>
+        <option>RETIRADO (MOTO)</option>
+        <option>MISS CAIN</option>
+        <option>PACOTE OFFICE</option>
+        <option>NÃO ROTEIRIZADO</option>
+        <option>DUPLICIDADE</option>
+        <option>DEVOLUÇÃO</option>
+        <option>VOADOR</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <button id="salvarEscolha">SALVAR ESCOLHA</button>
+      <button id="exportarRelatorio">EXPORTAR RELATÓRIO</button>
+      <button id="abrirManual">ATRIBUIÇÃO MANUAL</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modalFallback" class="modal">
+    <div class="modal-content">
+      <h2>Associar BR ao CEP</h2>
+      <p>Informe o BR para associar ao CEP (opcional):</p>
+      <input type="text" id="fallbackBR" placeholder="Digite o BR (ou deixe em branco)" />
+      <div class="modal-actions">
+        <button id="confirmFallback">CONFIRMAR</button>
+        <button id="cancelFallback">CANCELAR</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+
+
+  <div class="footer-signature">Por Danilo Freiria</div>
+</body>
+</html>

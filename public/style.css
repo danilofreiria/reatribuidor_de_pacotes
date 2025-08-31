@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Roboto Mono', monospace;
+    color: #3ceb2f;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px; /* Adiciona espaçamento no topo da página */
+}
+
+.container {
+    width: 92%;
+    max-width: 900px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    text-shadow: 0 0 5px #3ceb2f;
+    margin-bottom: 50px;
+}
+
+/* Upload */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.upload-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px dashed  #3ceb2f;
+    color:  #3ceb2f;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+}
+
+button:hover {
+    background-color:  #3ceb2f;
+    color: black;
+    text-shadow: none;
+    box-shadow: 0 0 8px  #3ceb2f;
+    font-size: 0.6rem;
+}
+
+span[id^="labelHistorico"], span[id^="labelDia"] {
+    margin-left: 10px;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* Field box */
+.field-box {
+    border: 1px dashed  #3ceb2f;
+    padding: 12px;
+    margin-top: 100px;
+    margin: 12px auto; 
+    width: 90%;
+    max-width: 800px; 
+}
+
+.input-group {
+   
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; 
+}
+
+.input-field {
+    width: 100%;
+    background: transparent;
+    border: 1px solid  #3ceb2f;
+    color:  #3ceb2f;
+    padding: 6px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.separator {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color:  #3ceb2f;
+}
+
+/* Results */
+.result-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 14px 0;
+}
+
+.rota {
+    border: 1px dashed  #3ceb2f;
+    padding: 10px;
+    width: 180px;
+    text-align: center;
+}
+
+.output-value {
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.rota-opcao.selecionada {
+    background:  #3ceb2f;
+    color: black;
+    font-weight: bold;
+}
+
+.motivo-section { 
+    margin: 8px 0; 
+}
+
+#motivo {
+   
+    width: 100%;
+    background-color: black; 
+    border: 1px dashed #00FF00; 
+    color: #00FF00; 
+    padding: 6px;
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
+}
+
+#motivo option {
+
+    background-color: black;
+    color: #00FF00;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.footer-signature {
+    margin-top: 8px;
+    font-size: 0.6rem;
+    opacity: 0.7;
+    text-align: center;
+    width: 100%; 
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: black;
+    border: 1px dashed  #3ceb2f;
+    padding: 18px;
+    color:  #3ceb2f;
+    width: 340px;
+    text-align: center;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 6px;
+    margin-top: 8px;
+    background: transparent;
+    border: 1px solid  #3ceb2f;
+    color:  #3ceb2f;
+    box-sizing: border-box;
+}
+
+.modal-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .result-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .rota {
+        width: 90%;
+        max-width: 320px;
+    }
+    .actions {
+        flex-direction: column;
+    }
+    button {
+        width: 90%;
+        max-width: 320px;
+    }
+}

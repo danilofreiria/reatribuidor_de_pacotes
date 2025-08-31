@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Atribuição Manual</title>
+  <link rel="stylesheet" href="manual.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">ATRIBUIÇÃO MANUAL</h1>
+
+    <div class="field-box">
+      <div class="input-group">
+        <label for="brManual">BR (obrigatório)</label>
+        <input type="text" id="brManual" class="input-field" />
+      </div>
+
+      <div class="input-group">
+        <label for="rotaManual">Rota (obrigatório)</label>
+        <input type="text" id="rotaManual" class="input-field" />
+      </div>
+
+      <div class="input-group">
+        <label for="cidadeManual">Cidade (obrigatório)</label>
+        <select id="cidadeManual" class="input-field">
+          <option value="">Selecione</option>
+          <option>ASSIS</option>
+          <option>PARAGUAÇU PAULISTA</option>
+          <option>PEDRINHAS PAULISTA</option>
+          <option>CRUZÁLIA</option>
+          <option>PALMITAL</option>
+          <option>MARACAÍ</option>
+          <option>LUTÉCIA</option>
+          <option>CÂNDIDO MOTA</option>
+          <option>TARUMÃ</option>
+          <option>FLORÍNEA</option>
+          <option>PLATINA</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="atManual">AT (opcional)</label>
+        <input type="text" id="atManual" class="input-field" />
+      </div>
+
+      <div class="input-group">
+        <label for="modalManual">MODAL</label>
+        <select id="modalManual" class="input-field">
+          <option value="">Selecione</option>
+          <option>PASSEIO</option>
+          <option>UTILITÁRIO</option>
+          <option>MOTO</option>
+        </select>
+      </div>
+
+      <div class="motivo-section">
+        <label for="motivo">MOTIVO DA REATRIBUIÇÃO:</label>
+        <select id="motivo" class="input-field">
+          <option value="">Selecione</option>
+          <option>ERRO DE ETIQUETA</option>
+          <option>ERRO DE SORTING</option>
+          <option>RETIRADO (VOLUMOSO)</option>
+          <option>RETIRADO (MOTO)</option>
+          <option>MISS CAIN</option>
+          <option>PACOTE OFFICE</option>
+          <option>NÃO ROTEIRIZADO</option>
+          <option>DUPLICIDADE</option>
+          <option>DEVOLUÇÃO</option>
+          <option>VOADOR</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="salvarManual">SALVAR</button>
+      <button id="limparManual">LIMPAR</button>
+    </div>
+
+    <footer> ATENÇÃO: Os registros manuais entram no mesmo relatório de exportação.</footer>
+  </div>
+
+  <script src="manual.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Dependências
+/node_modules
+
+# Arquivos gerados (build)
+/dist
+/build
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+
+# Variáveis de ambiente
+.env
